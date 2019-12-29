@@ -9,7 +9,14 @@ import           Huler.Problem1
 import           Huler.Problem2
 import           Huler.Problem3
 import           Huler.Problem4
+import           Huler.Problem5
+import           Huler.Problem6
 
 intToAns :: M.Map Int (IO ())
 intToAns =
-  M.fromList [(1, problem1), (2, problem2), (3, problem3), (4, problem4)]
+  M.fromList [ (1, problem1)
+             , (2, problem2)
+             , (3, problem3)
+             , (4, problem4)
+             , (5, problem5)
+             , (6, problem6)]
