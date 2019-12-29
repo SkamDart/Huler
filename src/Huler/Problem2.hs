@@ -1,7 +1,7 @@
 module Huler.Problem2
-(
-   problem2
-) where
+  ( problem2
+  )
+where
 
 -- Problem Two
 --
@@ -12,8 +12,9 @@ module Huler.Problem2
 -- By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 problem2 :: IO ()
 problem2 = putStrLn $ show ans
-  where ans = sum (filter even (takeWhile (\x -> x < maxNum) fibbs))
-        fibbs :: [Int]
-        fibbs = 0 : 1 : zipWith (+) fibbs (tail fibbs)
-        maxNum = 4000000
+ where
+  ans = sum (filter even (takeWhile (\x -> x < maxNum) fibbs))
+  fibbs :: [Int]
+  fibbs  = 0 : 1 : zipWith (+) fibbs (tail fibbs)
+  maxNum = 4000000
 

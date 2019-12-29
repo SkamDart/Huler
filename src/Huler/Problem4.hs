@@ -1,7 +1,6 @@
 module Huler.Problem4
-(
-    problem4
-)
+  ( problem4
+  )
 where
 
 -- Problem Four
@@ -14,9 +13,12 @@ problem4 = putStrLn $ show problemFour'
 
 problemFour' :: (Enum a, Num a, Ord a, Show a) => a
 problemFour' =
-    let prods = [(x * y) | x <- (enumFromThenTo 999 998 1),
-                           y <- (enumFromThenTo 999 998 1),
-                           isPalindrome (show (x * y)) ]
-        isPalindrome xs = xs == (reverse xs)
-    in maximum prods
+  let prods =
+          [ (x * y)
+          | x <- (enumFromThenTo 999 998 1)
+          , y <- (enumFromThenTo 999 998 1)
+          , isPalindrome (show (x * y))
+          ]
+      isPalindrome xs = xs == (reverse xs)
+  in  maximum prods
 

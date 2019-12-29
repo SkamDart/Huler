@@ -1,7 +1,6 @@
 module Huler.Problem3
-(
-    problem3
-)
+  ( problem3
+  )
 where
 
 -- Problem Three
@@ -10,16 +9,14 @@ where
 --
 -- What is the largest prime factor of the number 600851475143 ?
 problem3 :: IO ()
-problem3 = putStrLn $ show ans
-    where ans = problemThree' 600851475143
+problem3 = putStrLn $ show ans where ans = problemThree' 600851475143
 
 problemThree' :: Integer -> Integer
 problemThree' k =
-    let pfs :: (Integral a, Ord a) => a -> a -> [a]
-        pfs n p = if n < (p ^ 2) then [n]
-                  else v ++ (pfs n' p')
-             where (v, n', p') = if n `mod` p == 0
-                                 then ([p], n `div` p, p)
-                                 else ([],  n,         p + 1)
-    in maximum (pfs k 2)
+  let pfs :: (Integral a, Ord a) => a -> a -> [a]
+      pfs n p = if n < (p ^ 2) then [n] else v ++ (pfs n' p')
+         where
+          (v, n', p') =
+            if n `mod` p == 0 then ([p], n `div` p, p) else ([], n, p + 1)
+  in  maximum (pfs k 2)
 
