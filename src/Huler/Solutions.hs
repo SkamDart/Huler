@@ -11,6 +11,7 @@ import           Huler.Problem3
 import           Huler.Problem4
 import           Huler.Problem5
 import           Huler.Problem6
+import           Huler.Problem7
 
 import           Huler.Problem10
 
@@ -22,5 +23,6 @@ intToAns =
              , (4, problem4)
              , (5, problem5)
              , (6, problem6)
+             , (7, problem7)
              , (10, problem10)]
 
