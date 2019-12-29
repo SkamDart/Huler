@@ -24,6 +24,7 @@ library
     default-language: Haskell2010
 
 executable huler
+  hs-source-dirs: src
   main-is:             Main.hs
   -- other-modules:
   -- other-extensions:
