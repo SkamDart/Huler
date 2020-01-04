@@ -15,6 +15,7 @@ import           Huler.Problem7
 import           Huler.Problem9
 import           Huler.Problem10
 import           Huler.Problem20
+import           Huler.Problem28
 
 intToAns :: M.Map Int (IO ())
 intToAns =
@@ -28,5 +29,6 @@ intToAns =
              , (9, problem9)
              , (10, problem10)
              , (20, problem20)
+             , (28, problem28)
              ]
 
